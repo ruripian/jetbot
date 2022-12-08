@@ -51,6 +51,19 @@ def update(change):
     
     time.sleep(0.001)
 ```
+
+- stitch.py
+```py
+status, dst = stitcher.stitch(imgs)
+
+if status != cv2.Stitcher_OK:
+    print('Stitch failed!')
+    sys.exit()
+    
+# 결과 사진 저장
+cv2.imwrite('output.jpg', dst)
+``` 
+
 - create_html.py 
 
 create_html.py를 실행 후 다음과 같이 이미지 링크를 입력해주세요.
